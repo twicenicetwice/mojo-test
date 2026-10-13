@@ -1,0 +1,4 @@
+lucide-static 1.55.0 — ISC — https://registry.npmjs.org/lucide-static/-/lucide-static-1.55.0.tgz
+flag-icons 7.5.0 — MIT — https://registry.npmjs.org/flag-icons/-/flag-icons-7.5.0.tgz
+simple-icons 16.35.0 — CC0-1.0 — https://registry.npmjs.org/simple-icons/-/simple-icons-16.35.0.tgz
+Flags: 200 locally bundled SVG files.

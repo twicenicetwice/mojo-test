@@ -1,0 +1,2532 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080c15" />
+    <meta
+      name="description"
+      content="Mojo Mobile — eSIM для путешествий в 200 странах. Выберите страну, оплатите российской картой и установите eSIM перед поездкой."
+    />
+    <title>Mojo Mobile — меняйте страны, оставайтесь на связи</title>
+    <link rel="icon" href="assets/mojo-mark.png" />
+    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="polish.css?v=7" />
+  </head>
+  <body>
+    <svg
+      class="icon-sprite"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <symbol
+          id="i-arrow-down"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 5v14" />
+          <path d="m19 12-7 7-7-7" />
+        </symbol>
+        <symbol
+          id="i-arrow-right"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </symbol>
+        <symbol
+          id="i-arrow-up-right"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M7 7h10v10" />
+          <path d="M7 17 17 7" />
+        </symbol>
+        <symbol
+          id="i-arrow-up"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m5 12 7-7 7 7" />
+          <path d="M12 19V5" />
+        </symbol>
+        <symbol
+          id="i-calendar-days"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M8 2v3" />
+          <path d="M16 2v3" />
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M3 9h18" />
+          <path d="M8 13h.01" />
+          <path d="M12 13h.01" />
+          <path d="M16 13h.01" />
+          <path d="M8 17h.01" />
+          <path d="M12 17h.01" />
+          <path d="M16 17h.01" />
+        </symbol>
+        <symbol
+          id="i-circle-help"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+          <path d="M12 17h.01" />
+        </symbol>
+        <symbol
+          id="i-copy"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+          <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+        </symbol>
+        <symbol
+          id="i-credit-card"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="20" height="14" x="2" y="5" rx="2" />
+          <line x1="2" x2="22" y1="10" y2="10" />
+          <path d="M6 14h2" />
+        </symbol>
+        <symbol
+          id="i-menu"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 5h16" />
+          <path d="M4 12h16" />
+          <path d="M4 19h16" />
+        </symbol>
+        <symbol
+          id="i-pause"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="14" y="3" width="5" height="18" rx="1" />
+          <rect x="5" y="3" width="5" height="18" rx="1" />
+        </symbol>
+        <symbol
+          id="i-play"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+          />
+        </symbol>
+        <symbol
+          id="i-plus"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14" />
+          <path d="M12 5v14" />
+        </symbol>
+        <symbol
+          id="i-qr-code"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="5" height="5" x="3" y="3" rx="1" />
+          <rect width="5" height="5" x="16" y="3" rx="1" />
+          <rect width="5" height="5" x="3" y="16" rx="1" />
+          <path d="M21 16h-3a2 2 0 0 0-2 2v3" />
+          <path d="M21 21v.01" />
+          <path d="M12 7v3a2 2 0 0 1-2 2H7" />
+          <path d="M3 12h.01" />
+          <path d="M12 3h.01" />
+          <path d="M12 16v.01" />
+          <path d="M16 12h1" />
+          <path d="M21 12v.01" />
+          <path d="M12 21v-1" />
+        </symbol>
+        <symbol
+          id="i-search"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m21 21-4.34-4.34" />
+          <circle cx="11" cy="11" r="8" />
+        </symbol>
+        <symbol
+          id="i-store"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" />
+          <path
+            d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"
+          />
+          <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" />
+        </symbol>
+        <symbol
+          id="i-telegram"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+        >
+          <title>Telegram</title>
+          <path
+            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+          />
+        </symbol>
+        <symbol
+          id="i-wifi"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 20h.01" />
+          <path d="M2 8.82a15 15 0 0 1 20 0" />
+          <path d="M5 12.859a10 10 0 0 1 14 0" />
+          <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+        </symbol>
+        <symbol
+          id="i-x"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip" href="#main">Перейти к содержимому</a>
+    <header class="header">
+      <div class="header-inner wrap">
+        <a class="brand" href="#top" aria-label="Mojo Mobile — главная"
+          ><span class="brand-mark"
+            ><img
+              src="assets/mojo-mark.png"
+              alt=""
+              width="40"
+              height="24" /></span
+          ><span class="brand-word"
+            >Mojo <b>Mobile</b><small>Интернет по всему миру</small></span
+          ></a
+        >
+        <nav id="navigation" aria-label="Главное меню">
+          <a href="#countries">Купить eSIM</a><a href="#how">Подключение</a
+          ><a href="#devices">Проверить телефон</a>
+        </nav>
+        <a
+          class="header-help"
+          href="https://app.mojomobile.ru/help"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Поддержка
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-arrow-up-right"></use></svg
+        ></a>
+        <button
+          class="menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Открыть меню"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="departure-hero" id="top" aria-labelledby="hero-title">
+        <div class="departure-image">
+          <img
+            src="assets/hero-coast-v2.webp"
+            srcset="
+              assets/hero-coast-960.webp  960w,
+              assets/hero-coast-v2.webp  1672w
+            "
+            sizes="100vw"
+            width="1672"
+            height="941"
+            alt="Морская бухта и прибрежный город на закате"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="departure-content wrap">
+          <p class="hero-slogan">
+            Где бы вы ни были,<br class="slogan-break" />
+            вы на связи.
+          </p>
+          <h1 id="hero-title">
+            Интернет в 2 клика<br /><em>в 200+ странах.</em>
+          </h1>
+          <p class="hero-lead">
+            eSIM для путешествий.<br />Без дорогого роуминга.
+          </p>
+          <div class="departure-actions">
+            <a class="primary" href="#countries"
+              >Выбрать страну
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use></svg></a
+            ><a class="secondary-button" href="#devices"
+              >Проверить телефон
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-right"></use></svg
+            ></a>
+          </div>
+        </div>
+        <div class="hero-bottom wrap">
+          <div class="hero-benefits">
+            <span>Оплата российскими картами</span
+            ><span>Установка по QR-коду</span
+            ><span>Ваш номер остаётся с вами</span>
+          </div>
+          <button class="hero-reminder" type="button" data-remind>
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-calendar-days"></use></svg
+            ><span>Напомнить перед вылетом</span
+            ><svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="channels wrap section"
+        id="channels"
+        aria-labelledby="channels-title"
+      >
+        <div class="section-heading">
+          <div><h2 id="channels-title">Магазин или Telegram</h2></div>
+        </div>
+        <div class="channel-grid">
+          <article class="channel-card">
+            <span class="channel-icon" aria-hidden="true"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-store"></use></svg
+            ></span>
+            <h3>Веб-магазин</h3>
+            <p>
+              Выберите направление, сравните варианты и оформите eSIM онлайн.
+            </p>
+            <a
+              class="channel-link"
+              href="https://app.mojomobile.ru/"
+              data-shop
+              target="_blank"
+              rel="noopener noreferrer"
+              >Перейти в магазин
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use></svg
+            ></a>
+          </article>
+          <article class="channel-card">
+            <span class="channel-icon" aria-hidden="true"
+              ><svg class="icon brand-icon" aria-hidden="true">
+                <use href="#i-telegram"></use></svg
+            ></span>
+            <h3>Telegram</h3>
+            <p>
+              Выберите eSIM, проверяйте баланс и пополняйте пакет в привычном
+              чате.
+            </p>
+            <a
+              class="channel-link"
+              href="https://t.me/mojo_mobile_bot?startapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Открыть Telegram
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use></svg
+            ></a>
+          </article>
+        </div>
+      </section>
+      <section
+        class="catalogue wrap section"
+        id="countries"
+        aria-labelledby="countries-title"
+      >
+        <div class="section-heading">
+          <div><h2 id="countries-title">Куда вы отправляетесь?</h2></div>
+          <div class="catalogue-intro">
+            <label class="catalogue-search"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-search"></use></svg
+              ><input
+                id="country-search"
+                type="search"
+                aria-label="Поиск по всем странам"
+                placeholder="Найти страну"
+                autocomplete="off"
+            /></label>
+          </div>
+        </div>
+        <div class="catalogue-bar">
+          <div
+            class="catalogue-tabs"
+            role="group"
+            aria-label="Показать направления"
+          >
+            <button class="active" data-mode="popular" aria-pressed="true">
+              Популярные</button
+            ><button
+              data-mode="all"
+              aria-haspopup="dialog"
+              aria-controls="countries-dialog"
+            >
+              Все страны <span>200</span>
+            </button>
+          </div>
+        </div>
+        <div id="country-grid" class="country-grid">
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/TR"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/tr.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Турция</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/TH"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/th.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Таиланд</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/VN"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/vn.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Вьетнам</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/AE"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/ae.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">ОАЭ</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/ID"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/id.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Индонезия</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/GE"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/ge.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Грузия</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/CN"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/cn.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Китай</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+          <a
+            class="country"
+            href="https://app.mojomobile.ru/countries/JP"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              class="country-flag"
+              src="assets/flags/jp.svg"
+              width="44"
+              height="33"
+              alt="" /><span class="country-name">Япония</span
+            ><svg class="icon country-arrow" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+        </div>
+        <p id="search-status" class="search-status" aria-live="polite"></p>
+        <div class="catalogue-bottom">
+          <p>Актуальные тарифы и условия — в магазине.</p>
+          <a
+            class="quiet-link"
+            href="https://app.mojomobile.ru/"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            >Открыть веб-магазин
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+        </div>
+      </section>
+
+      <section class="how" id="how" aria-labelledby="how-title">
+        <div class="wrap">
+          <div class="how-heading">
+            <h2 id="how-title">Три шага —<br />и вы на связи.</h2>
+          </div>
+          <ol class="steps">
+            <li>
+              <span class="step-no">01</span
+              ><span class="step-icon" aria-hidden="true"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-credit-card"></use></svg
+              ></span>
+              <h3>Выберите тариф</h3>
+              <p>
+                Выберите страну, нужный объём интернета и срок действия.
+                Оплатите покупку российской картой в рублях.
+              </p>
+              <a href="#countries"
+                >Выбрать страну
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-up-right"></use></svg
+              ></a>
+            </li>
+            <li>
+              <span class="step-no">02</span
+              ><span class="step-icon" aria-hidden="true"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-qr-code"></use></svg
+              ></span>
+              <h3>Установите eSIM</h3>
+              <p>
+                После покупки вы получите QR-код и инструкцию. Установите eSIM
+                заранее, подключившись к Wi-Fi.
+              </p>
+              <a
+                href="https://app.mojomobile.ru/help"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Инструкция по установке
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-up-right"></use></svg
+              ></a>
+            </li>
+            <li>
+              <span class="step-no">03</span
+              ><span class="step-icon" aria-hidden="true"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-wifi"></use></svg
+              ></span>
+              <h3>Подключитесь после прилёта</h3>
+              <p>
+                В настройках телефона выберите eSIM Mojo для мобильного
+                интернета. Включите роуминг данных на этой eSIM, следуя
+                инструкции.
+              </p>
+              <a
+                href="https://app.mojomobile.ru/help"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Если нужна помощь
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-up-right"></use></svg
+              ></a>
+            </li>
+          </ol>
+          <div class="how-note">
+            <svg class="icon note-marker" aria-hidden="true">
+              <use href="#i-circle-help"></use>
+            </svg>
+            <p>
+              Перед покупкой проверьте, когда начинается срок действия тарифа и
+              в течение какого времени нужно активировать eSIM.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="device wrap section"
+        id="devices"
+        aria-labelledby="device-title"
+      >
+        <div class="device-heading">
+          <h2 id="device-title">Ваш телефон<br />поддерживает eSIM?</h2>
+          <p>
+            Найдите модель в списке или проверьте её с помощью короткого кода.
+          </p>
+          <a
+            class="quiet-link"
+            href="https://app.mojomobile.ru/devices"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Открыть список устройств
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+        </div>
+        <div class="device-guide">
+          <p>Наберите в приложении «Телефон»</p>
+          <div class="dial-row">
+            <code>*#06#</code
+            ><button
+              id="copy-code"
+              type="button"
+              aria-label="Скопировать код *#06#"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-copy"></use></svg
+              ><span>Скопировать</span>
+            </button>
+          </div>
+          <p id="copy-status" class="copy-status" aria-live="polite"></p>
+          <div class="eid-row">
+            <span>EID</span>
+            <p>
+              Если на экране есть номер EID, телефон поддерживает eSIM. Также
+              проверьте, что он не заблокирован для работы с другими
+              операторами.
+            </p>
+          </div>
+          <p class="device-note">
+            Если EID не отображается, проверьте настройки SIM-карт или найдите
+            телефон в списке устройств. Поддержка eSIM зависит от модели и
+            региона выпуска.
+          </p>
+        </div>
+      </section>
+
+      <section class="faq wrap section" id="faq" aria-labelledby="faq-title">
+        <div class="faq-heading">
+          <h2 id="faq-title">Ответы<br />на вопросы.</h2>
+          <a
+            class="quiet-link"
+            href="https://app.mojomobile.ru/help"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Задать свой вопрос
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg
+          ></a>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>
+              Сохранится ли мой номер?<svg
+                class="icon faq-plus"
+                aria-hidden="true"
+              >
+                <use href="#i-plus"></use>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Если телефон поддерживает две SIM-карты, основную можно оставить
+                для звонков и SMS, а Mojo использовать для интернета. Звонки и
+                SMS оплачиваются по условиям вашего основного оператора.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Когда начнётся срок действия?<svg
+                class="icon faq-plus"
+                aria-hidden="true"
+              >
+                <use href="#i-plus"></use>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Это зависит от тарифа. У многих пакетов срок начинается при
+                первом подключении к сети в стране назначения. Точные условия
+                активации указаны в карточке тарифа.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Можно ли раздавать интернет?<svg
+                class="icon faq-plus"
+                aria-hidden="true"
+              >
+                <use href="#i-plus"></use>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Возможность раздачи зависит от пакета и оператора. Посмотрите
+                условия выбранного тарифа или уточните у поддержки.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Что будет с неиспользованным интернетом?<svg
+                class="icon faq-plus"
+                aria-hidden="true"
+              >
+                <use href="#i-plus"></use>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                У каждого тарифа есть срок действия. Возможность перенести
+                остаток трафика, продлить срок или докупить интернет зависит от
+                выбранного пакета. Проверьте его условия перед покупкой.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Что делать, если я случайно удалил eSIM?<svg
+                class="icon faq-plus"
+                aria-hidden="true"
+              >
+                <use href="#i-plus"></use>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Напишите в поддержку Mojo. Повторная установка зависит от
+                оператора и может быть недоступна. Если eSIM ещё нужна, лучше
+                временно отключить её в настройках.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>
+              Что делать, если после прилёта нет интернета?<svg
+                class="icon faq-plus"
+                aria-hidden="true"
+              >
+                <use href="#i-plus"></use>
+              </svg>
+            </summary>
+            <div class="faq-answer">
+              <p>
+                Проверьте, что в настройках мобильного интернета выбрана eSIM
+                Mojo и для неё включён роуминг данных. Выполните шаги из
+                инструкции к тарифу. Если интернет не появился, напишите в
+                поддержку.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="checkout" id="buy" aria-labelledby="buy-title">
+        <div class="wrap checkout-inner">
+          <div>
+            <h2 id="buy-title">Интернет для<br />вашей следующей поездки.</h2>
+            <button class="quiet-link" type="button" data-remind>
+              Напомнить о покупке перед вылетом
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="checkout-channels">
+            <a
+              href="https://app.mojomobile.ru/"
+              data-shop
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span><b>Купить в веб-магазине</b></span
+              ><svg class="icon checkout-arrow" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use></svg></a
+            ><a
+              href="https://t.me/mojo_mobile_bot?startapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span><b>Купить в Telegram</b></span
+              ><svg class="icon checkout-arrow" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      <div class="footer-main">
+        <a class="brand" href="#top" aria-label="Mojo Mobile — наверх"
+          ><span class="brand-mark"
+            ><img
+              src="assets/mojo-mark.png"
+              alt=""
+              width="40"
+              height="24" /></span
+          ><span class="brand-word"
+            >Mojo <b>Mobile</b><small>Интернет по всему миру</small></span
+          ></a
+        >
+        <p>Интернет, о котором не приходится<br />думать за границей.</p>
+        <a
+          class="quiet-link"
+          href="https://app.mojomobile.ru/help"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Помощь и поддержка
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-arrow-up-right"></use></svg
+        ></a>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Mojo Mobile</span>
+        <div class="footer-links">
+          <a
+            href="https://app.mojomobile.ru/"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            >Тарифы и условия</a
+          ><a
+            href="https://mojomobile.ru/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Основной сайт</a
+          >
+        </div>
+        <div class="footer-channels">
+          <a
+            href="https://app.mojomobile.ru/"
+            data-shop
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg class="icon" aria-hidden="true">
+              <use href="#i-store"></use></svg
+            >Веб-магазин</a
+          ><a
+            href="https://t.me/mojo_mobile_bot?startapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><svg class="icon brand-icon" aria-hidden="true">
+              <use href="#i-telegram"></use></svg
+            >Telegram</a
+          >
+        </div>
+      </div>
+    </footer>
+    <div class="mobile-bar" aria-label="Быстрые действия">
+      <a href="#countries"
+        >Купить eSIM
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-arrow-up-right"></use></svg></a
+      ><button type="button" data-remind>
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-calendar-days"></use></svg
+        >Напомнить о покупке
+      </button>
+    </div>
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      type="button"
+      aria-label="Наверх"
+    >
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg
+      ><span>Наверх</span>
+    </button>
+    <dialog id="mobile-menu" class="menu-dialog" aria-label="Меню сайта">
+      <div class="menu-dialog-top">
+        <a class="brand" href="#top" aria-label="Mojo Mobile — главная"
+          ><span class="brand-mark"
+            ><img
+              src="assets/mojo-mark.png"
+              alt=""
+              width="40"
+              height="24" /></span
+          ><span class="brand-word"
+            >Mojo <b>Mobile</b><small>Интернет по всему миру</small></span
+          ></a
+        ><button id="close-menu" type="button" aria-label="Закрыть меню">
+          <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+        </button>
+      </div>
+      <div class="menu-dialog-content">
+        <nav class="menu-nav" aria-label="Мобильное меню">
+          <a href="#countries">Выбрать страну</a
+          ><a href="#how">Как подключить eSIM</a
+          ><a href="#devices">Проверить телефон</a>
+        </nav>
+        <div class="menu-ctas">
+          <a href="#countries" class="primary"
+            >Купить eSIM
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-up-right"></use></svg></a
+          ><button class="menu-remind" type="button" data-remind>
+            Напомнить о покупке
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-calendar-days"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <dialog
+      id="countries-dialog"
+      class="countries-dialog"
+      aria-labelledby="all-countries-title"
+    >
+      <div class="countries-dialog-scroll">
+        <div class="countries-dialog-header">
+          <div class="countries-dialog-title">
+            <h2 id="all-countries-title">Все страны</h2>
+            <button
+              id="close-countries"
+              type="button"
+              aria-label="Закрыть список стран"
+            >
+              <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+            </button>
+          </div>
+          <label class="catalogue-search"
+            ><svg class="icon" aria-hidden="true">
+              <use href="#i-search"></use></svg
+            ><input
+              id="all-country-search"
+              type="search"
+              placeholder="Найти страну"
+              aria-label="Поиск в списке всех стран"
+              autocomplete="off"
+          /></label>
+          <p id="all-country-status" aria-live="polite"></p>
+        </div>
+        <div id="all-country-grid" class="country-grid"></div>
+      </div>
+    </dialog>
+    <dialog
+      id="reminder-dialog"
+      class="reminder-dialog"
+      aria-labelledby="reminder-title"
+      aria-describedby="reminder-intro"
+    >
+      <div class="dialog-top">
+        <button
+          id="close-reminder"
+          class="dialog-close"
+          type="button"
+          aria-label="Закрыть напоминание"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>
+        </button>
+      </div>
+      <div class="dialog-content">
+        <h2 id="reminder-title">Напомнить<br />о покупке eSIM</h2>
+        <p id="reminder-intro">
+          Выберите дату и время. Затем сохраните событие в своём календаре.
+        </p>
+        <form id="reminder-form" novalidate>
+          <div class="reminder-fields">
+            <label class="field"
+              >Дата вылета<input
+                id="flight-date"
+                type="date"
+                required
+                aria-describedby="reminder-error"
+                autofocus /></label
+            ><label class="field"
+              >Когда напомнить<select id="lead-days">
+                <option value="1">За 1 день</option>
+                <option value="3" selected>За 3 дня</option>
+                <option value="7">За 7 дней</option>
+                <option value="0">В день вылета</option>
+              </select></label
+            ><label class="field"
+              >Время напоминания<input
+                id="reminder-time"
+                type="time"
+                value="10:00"
+                required
+                aria-describedby="reminder-error" /></label
+            ><label class="field"
+              ><span>Страна <span class="optional">необязательно</span></span
+              ><select id="reminder-country">
+                <option value="">Выберу позже</option>
+                <option value="TR">Турция</option>
+                <option value="TH">Таиланд</option>
+                <option value="VN">Вьетнам</option>
+                <option value="AE">ОАЭ</option>
+              </select></label
+            >
+          </div>
+          <p class="timezone-note" id="timezone-note"></p>
+          <p id="reminder-error" class="reminder-error" role="alert"></p>
+          <div class="event-preview" id="event-preview" hidden>
+            <span class="event-icon" aria-hidden="true"
+              ><svg class="icon" aria-hidden="true">
+                <use href="#i-calendar-days"></use></svg
+            ></span>
+            <div>
+              <p id="event-preview-date"></p>
+              <strong>Купить eSIM Mojo Mobile</strong
+              ><small id="event-preview-country"
+                >Выбрать тариф для поездки</small
+              >
+            </div>
+          </div>
+          <div class="calendar-actions">
+            <button id="google-calendar" class="primary" type="submit" disabled>
+              Добавить в Google Календарь
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-up-right"></use>
+              </svg></button
+            ><button
+              id="download-calendar"
+              class="calendar-file"
+              type="button"
+              disabled
+            >
+              Скачать файл для календаря
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <p class="calendar-help">
+            В Google Календаре откроется готовое событие. Для другого календаря
+            скачайте файл .ics и откройте его в приложении. Сохраните событие и
+            убедитесь, что уведомление включено.
+          </p>
+          <p
+            id="calendar-status"
+            class="calendar-status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+    </dialog>
+    <noscript
+      ><div class="noscript">
+        Для поиска по всем странам нужен JavaScript. Популярные направления и
+        <a
+          href="https://app.mojomobile.ru/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >веб-магазин</a
+        >
+        доступны без него.
+      </div></noscript
+    >
+    <script id="embedded-catalogue" type="application/json">
+      [
+        {
+          "code": "AF",
+          "name": "Афганистан",
+          "english": "Afghanistan",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/AF"
+        },
+        {
+          "code": "AX",
+          "name": "Аландские о-ва",
+          "english": "Åland Islands",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/AX"
+        },
+        {
+          "code": "AL",
+          "name": "Албания",
+          "english": "Albania",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/AL"
+        },
+        {
+          "code": "DZ",
+          "name": "Алжир",
+          "english": "Algeria",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/DZ"
+        },
+        {
+          "code": "AD",
+          "name": "Андорра",
+          "english": "Andorra",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/AD"
+        },
+        {
+          "code": "AO",
+          "name": "Ангола",
+          "english": "Angola",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/AO"
+        },
+        {
+          "code": "AI",
+          "name": "Ангилья",
+          "english": "Anguilla",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/AI"
+        },
+        {
+          "code": "AG",
+          "name": "Антигуа и Барбуда",
+          "english": "Antigua & Barbuda",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/AG"
+        },
+        {
+          "code": "AR",
+          "name": "Аргентина",
+          "english": "Argentina",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/AR"
+        },
+        {
+          "code": "AM",
+          "name": "Армения",
+          "english": "Armenia",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/AM"
+        },
+        {
+          "code": "AW",
+          "name": "Аруба",
+          "english": "Aruba",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/AW"
+        },
+        {
+          "code": "AU",
+          "name": "Австралия",
+          "english": "Australia",
+          "plans": 28,
+          "url": "https://app.mojomobile.ru/countries/AU"
+        },
+        {
+          "code": "AT",
+          "name": "Австрия",
+          "english": "Austria",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/AT"
+        },
+        {
+          "code": "AZ",
+          "name": "Азербайджан",
+          "english": "Azerbaijan",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/AZ"
+        },
+        {
+          "code": "BS",
+          "name": "Багамы",
+          "english": "Bahamas",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/BS"
+        },
+        {
+          "code": "BH",
+          "name": "Бахрейн",
+          "english": "Bahrain",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/BH"
+        },
+        {
+          "code": "BD",
+          "name": "Бангладеш",
+          "english": "Bangladesh",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/BD"
+        },
+        {
+          "code": "BB",
+          "name": "Барбадос",
+          "english": "Barbados",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/BB"
+        },
+        {
+          "code": "BY",
+          "name": "Беларусь",
+          "english": "Belarus",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/BY"
+        },
+        {
+          "code": "BE",
+          "name": "Бельгия",
+          "english": "Belgium",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/BE"
+        },
+        {
+          "code": "BZ",
+          "name": "Белиз",
+          "english": "Belize",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/BZ"
+        },
+        {
+          "code": "BJ",
+          "name": "Бенин",
+          "english": "Benin",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/BJ"
+        },
+        {
+          "code": "BM",
+          "name": "Бермудские о-ва",
+          "english": "Bermuda",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/BM"
+        },
+        {
+          "code": "BT",
+          "name": "Бутан",
+          "english": "Bhutan",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/BT"
+        },
+        {
+          "code": "BO",
+          "name": "Боливия",
+          "english": "Bolivia",
+          "plans": 6,
+          "url": "https://app.mojomobile.ru/countries/BO"
+        },
+        {
+          "code": "BA",
+          "name": "Босния и Герцеговина",
+          "english": "Bosnia & Herzegovina",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/BA"
+        },
+        {
+          "code": "BW",
+          "name": "Ботсвана",
+          "english": "Botswana",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/BW"
+        },
+        {
+          "code": "BR",
+          "name": "Бразилия",
+          "english": "Brazil",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/BR"
+        },
+        {
+          "code": "VG",
+          "name": "Виргинские о-ва (Великобритания)",
+          "english": "British Virgin Islands",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/VG"
+        },
+        {
+          "code": "BN",
+          "name": "Бруней",
+          "english": "Brunei",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/BN"
+        },
+        {
+          "code": "BG",
+          "name": "Болгария",
+          "english": "Bulgaria",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/BG"
+        },
+        {
+          "code": "BF",
+          "name": "Буркина-Фасо",
+          "english": "Burkina Faso",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/BF"
+        },
+        {
+          "code": "KH",
+          "name": "Камбоджа",
+          "english": "Cambodia",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/KH"
+        },
+        {
+          "code": "CM",
+          "name": "Камерун",
+          "english": "Cameroon",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/CM"
+        },
+        {
+          "code": "CA",
+          "name": "Канада",
+          "english": "Canada",
+          "plans": 26,
+          "url": "https://app.mojomobile.ru/countries/CA"
+        },
+        {
+          "code": "CV",
+          "name": "Кабо-Верде",
+          "english": "Cape Verde",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/CV"
+        },
+        {
+          "code": "BQ",
+          "name": "Бонэйр, Синт-Эстатиус и Саба",
+          "english": "Caribbean Netherlands",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/BQ"
+        },
+        {
+          "code": "KY",
+          "name": "о-ва Кайман",
+          "english": "Cayman Islands",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/KY"
+        },
+        {
+          "code": "CF",
+          "name": "Центрально-Африканская Республика",
+          "english": "Central African Republic",
+          "plans": 3,
+          "url": "https://app.mojomobile.ru/countries/CF"
+        },
+        {
+          "code": "TD",
+          "name": "Чад",
+          "english": "Chad",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/TD"
+        },
+        {
+          "code": "CL",
+          "name": "Чили",
+          "english": "Chile",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/CL"
+        },
+        {
+          "code": "CN",
+          "name": "Китай",
+          "english": "China",
+          "plans": 28,
+          "url": "https://app.mojomobile.ru/countries/CN"
+        },
+        {
+          "code": "CO",
+          "name": "Колумбия",
+          "english": "Colombia",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/CO"
+        },
+        {
+          "code": "CG",
+          "name": "Конго - Браззавиль",
+          "english": "Congo - Brazzaville",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/CG"
+        },
+        {
+          "code": "CD",
+          "name": "Конго - Киншаса",
+          "english": "Congo - Kinshasa",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/CD"
+        },
+        {
+          "code": "CR",
+          "name": "Коста-Рика",
+          "english": "Costa Rica",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/CR"
+        },
+        {
+          "code": "CI",
+          "name": "Кот-д’Ивуар",
+          "english": "Côte d’Ivoire",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/CI"
+        },
+        {
+          "code": "HR",
+          "name": "Хорватия",
+          "english": "Croatia",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/HR"
+        },
+        {
+          "code": "CW",
+          "name": "Кюрасао",
+          "english": "Curaçao",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/CW"
+        },
+        {
+          "code": "CY",
+          "name": "Кипр",
+          "english": "Cyprus",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/CY"
+        },
+        {
+          "code": "CZ",
+          "name": "Чехия",
+          "english": "Czechia",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/CZ"
+        },
+        {
+          "code": "DK",
+          "name": "Дания",
+          "english": "Denmark",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/DK"
+        },
+        {
+          "code": "DM",
+          "name": "Доминика",
+          "english": "Dominica",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/DM"
+        },
+        {
+          "code": "DO",
+          "name": "Доминиканская Республика",
+          "english": "Dominican Republic",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/DO"
+        },
+        {
+          "code": "EC",
+          "name": "Эквадор",
+          "english": "Ecuador",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/EC"
+        },
+        {
+          "code": "EG",
+          "name": "Египет",
+          "english": "Egypt",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/EG"
+        },
+        {
+          "code": "SV",
+          "name": "Сальвадор",
+          "english": "El Salvador",
+          "plans": 4,
+          "url": "https://app.mojomobile.ru/countries/SV"
+        },
+        {
+          "code": "EE",
+          "name": "Эстония",
+          "english": "Estonia",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/EE"
+        },
+        {
+          "code": "SZ",
+          "name": "Эсватини",
+          "english": "Eswatini",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/SZ"
+        },
+        {
+          "code": "ET",
+          "name": "Эфиопия",
+          "english": "Ethiopia",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/ET"
+        },
+        {
+          "code": "FO",
+          "name": "Фарерские о-ва",
+          "english": "Faroe Islands",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/FO"
+        },
+        {
+          "code": "FJ",
+          "name": "Фиджи",
+          "english": "Fiji",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/FJ"
+        },
+        {
+          "code": "FI",
+          "name": "Финляндия",
+          "english": "Finland",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/FI"
+        },
+        {
+          "code": "FR",
+          "name": "Франция",
+          "english": "France",
+          "plans": 15,
+          "url": "https://app.mojomobile.ru/countries/FR"
+        },
+        {
+          "code": "GF",
+          "name": "Французская Гвиана",
+          "english": "French Guiana",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/GF"
+        },
+        {
+          "code": "PF",
+          "name": "Французская Полинезия",
+          "english": "French Polynesia",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/PF"
+        },
+        {
+          "code": "GA",
+          "name": "Габон",
+          "english": "Gabon",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/GA"
+        },
+        {
+          "code": "GM",
+          "name": "Гамбия",
+          "english": "Gambia",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/GM"
+        },
+        {
+          "code": "GE",
+          "name": "Грузия",
+          "english": "Georgia",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/GE"
+        },
+        {
+          "code": "DE",
+          "name": "Германия",
+          "english": "Germany",
+          "plans": 15,
+          "url": "https://app.mojomobile.ru/countries/DE"
+        },
+        {
+          "code": "GH",
+          "name": "Гана",
+          "english": "Ghana",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/GH"
+        },
+        {
+          "code": "GI",
+          "name": "Гибралтар",
+          "english": "Gibraltar",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/GI"
+        },
+        {
+          "code": "GR",
+          "name": "Греция",
+          "english": "Greece",
+          "plans": 15,
+          "url": "https://app.mojomobile.ru/countries/GR"
+        },
+        {
+          "code": "GL",
+          "name": "Гренландия",
+          "english": "Greenland",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/GL"
+        },
+        {
+          "code": "GD",
+          "name": "Гренада",
+          "english": "Grenada",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/GD"
+        },
+        {
+          "code": "GP",
+          "name": "Гваделупа",
+          "english": "Guadeloupe",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/GP"
+        },
+        {
+          "code": "GU",
+          "name": "Гуам",
+          "english": "Guam",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/GU"
+        },
+        {
+          "code": "GT",
+          "name": "Гватемала",
+          "english": "Guatemala",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/GT"
+        },
+        {
+          "code": "GG",
+          "name": "Гернси",
+          "english": "Guernsey",
+          "plans": 4,
+          "url": "https://app.mojomobile.ru/countries/GG"
+        },
+        {
+          "code": "GN",
+          "name": "Гвинея",
+          "english": "Guinea",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/GN"
+        },
+        {
+          "code": "GW",
+          "name": "Гвинея-Бисау",
+          "english": "Guinea-Bissau",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/GW"
+        },
+        {
+          "code": "GY",
+          "name": "Гайана",
+          "english": "Guyana",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/GY"
+        },
+        {
+          "code": "HT",
+          "name": "Гаити",
+          "english": "Haiti",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/HT"
+        },
+        {
+          "code": "HN",
+          "name": "Гондурас",
+          "english": "Honduras",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/HN"
+        },
+        {
+          "code": "HK",
+          "name": "Гонконг",
+          "english": "Hong Kong",
+          "plans": 25,
+          "url": "https://app.mojomobile.ru/countries/HK"
+        },
+        {
+          "code": "HU",
+          "name": "Венгрия",
+          "english": "Hungary",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/HU"
+        },
+        {
+          "code": "IS",
+          "name": "Исландия",
+          "english": "Iceland",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/IS"
+        },
+        {
+          "code": "IN",
+          "name": "Индия",
+          "english": "India",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/IN"
+        },
+        {
+          "code": "ID",
+          "name": "Индонезия",
+          "english": "Indonesia",
+          "plans": 26,
+          "url": "https://app.mojomobile.ru/countries/ID"
+        },
+        {
+          "code": "IQ",
+          "name": "Ирак",
+          "english": "Iraq",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/IQ"
+        },
+        {
+          "code": "IE",
+          "name": "Ирландия",
+          "english": "Ireland",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/IE"
+        },
+        {
+          "code": "IM",
+          "name": "о-в Мэн",
+          "english": "Isle of Man",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/IM"
+        },
+        {
+          "code": "IL",
+          "name": "Израиль",
+          "english": "Israel",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/IL"
+        },
+        {
+          "code": "IT",
+          "name": "Италия",
+          "english": "Italy",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/IT"
+        },
+        {
+          "code": "JM",
+          "name": "Ямайка",
+          "english": "Jamaica",
+          "plans": 5,
+          "url": "https://app.mojomobile.ru/countries/JM"
+        },
+        {
+          "code": "JP",
+          "name": "Япония",
+          "english": "Japan",
+          "plans": 35,
+          "url": "https://app.mojomobile.ru/countries/JP"
+        },
+        {
+          "code": "JE",
+          "name": "Джерси",
+          "english": "Jersey",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/JE"
+        },
+        {
+          "code": "JO",
+          "name": "Иордания",
+          "english": "Jordan",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/JO"
+        },
+        {
+          "code": "KZ",
+          "name": "Казахстан",
+          "english": "Kazakhstan",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/KZ"
+        },
+        {
+          "code": "KE",
+          "name": "Кения",
+          "english": "Kenya",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/KE"
+        },
+        {
+          "code": "XK",
+          "name": "Косово",
+          "english": "Kosovo",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/XK"
+        },
+        {
+          "code": "KW",
+          "name": "Кувейт",
+          "english": "Kuwait",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/KW"
+        },
+        {
+          "code": "KG",
+          "name": "Киргизия",
+          "english": "Kyrgyzstan",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/KG"
+        },
+        {
+          "code": "LA",
+          "name": "Лаос",
+          "english": "Laos",
+          "plans": 23,
+          "url": "https://app.mojomobile.ru/countries/LA"
+        },
+        {
+          "code": "LV",
+          "name": "Латвия",
+          "english": "Latvia",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/LV"
+        },
+        {
+          "code": "LS",
+          "name": "Лесото",
+          "english": "Lesotho",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/LS"
+        },
+        {
+          "code": "LR",
+          "name": "Либерия",
+          "english": "Liberia",
+          "plans": 3,
+          "url": "https://app.mojomobile.ru/countries/LR"
+        },
+        {
+          "code": "LY",
+          "name": "Ливия",
+          "english": "Libya",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/LY"
+        },
+        {
+          "code": "LI",
+          "name": "Лихтенштейн",
+          "english": "Liechtenstein",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/LI"
+        },
+        {
+          "code": "LT",
+          "name": "Литва",
+          "english": "Lithuania",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/LT"
+        },
+        {
+          "code": "LU",
+          "name": "Люксембург",
+          "english": "Luxembourg",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/LU"
+        },
+        {
+          "code": "MO",
+          "name": "Макао",
+          "english": "Macao",
+          "plans": 24,
+          "url": "https://app.mojomobile.ru/countries/MO"
+        },
+        {
+          "code": "MG",
+          "name": "Мадагаскар",
+          "english": "Madagascar",
+          "plans": 4,
+          "url": "https://app.mojomobile.ru/countries/MG"
+        },
+        {
+          "code": "MW",
+          "name": "Малави",
+          "english": "Malawi",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MW"
+        },
+        {
+          "code": "MY",
+          "name": "Малайзия",
+          "english": "Malaysia",
+          "plans": 27,
+          "url": "https://app.mojomobile.ru/countries/MY"
+        },
+        {
+          "code": "MV",
+          "name": "Мальдивы",
+          "english": "Maldives",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/MV"
+        },
+        {
+          "code": "ML",
+          "name": "Мали",
+          "english": "Mali",
+          "plans": 2,
+          "url": "https://app.mojomobile.ru/countries/ML"
+        },
+        {
+          "code": "MT",
+          "name": "Мальта",
+          "english": "Malta",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/MT"
+        },
+        {
+          "code": "MQ",
+          "name": "Мартиника",
+          "english": "Martinique",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/MQ"
+        },
+        {
+          "code": "MR",
+          "name": "Мавритания",
+          "english": "Mauritania",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/MR"
+        },
+        {
+          "code": "MU",
+          "name": "Маврикий",
+          "english": "Mauritius",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MU"
+        },
+        {
+          "code": "YT",
+          "name": "Майотта",
+          "english": "Mayotte",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/YT"
+        },
+        {
+          "code": "MX",
+          "name": "Мексика",
+          "english": "Mexico",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MX"
+        },
+        {
+          "code": "MD",
+          "name": "Молдова",
+          "english": "Moldova",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MD"
+        },
+        {
+          "code": "MC",
+          "name": "Монако",
+          "english": "Monaco",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MC"
+        },
+        {
+          "code": "MN",
+          "name": "Монголия",
+          "english": "Mongolia",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MN"
+        },
+        {
+          "code": "ME",
+          "name": "Черногория",
+          "english": "Montenegro",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/ME"
+        },
+        {
+          "code": "MS",
+          "name": "Монтсеррат",
+          "english": "Montserrat",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/MS"
+        },
+        {
+          "code": "MA",
+          "name": "Марокко",
+          "english": "Morocco",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/MA"
+        },
+        {
+          "code": "MZ",
+          "name": "Мозамбик",
+          "english": "Mozambique",
+          "plans": 5,
+          "url": "https://app.mojomobile.ru/countries/MZ"
+        },
+        {
+          "code": "NR",
+          "name": "Науру",
+          "english": "Nauru",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/NR"
+        },
+        {
+          "code": "NP",
+          "name": "Непал",
+          "english": "Nepal",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/NP"
+        },
+        {
+          "code": "NL",
+          "name": "Нидерланды",
+          "english": "Netherlands",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/NL"
+        },
+        {
+          "code": "NC",
+          "name": "Новая Каледония",
+          "english": "New Caledonia",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/NC"
+        },
+        {
+          "code": "NZ",
+          "name": "Новая Зеландия",
+          "english": "New Zealand",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/NZ"
+        },
+        {
+          "code": "NI",
+          "name": "Никарагуа",
+          "english": "Nicaragua",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/NI"
+        },
+        {
+          "code": "NE",
+          "name": "Нигер",
+          "english": "Niger",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/NE"
+        },
+        {
+          "code": "NG",
+          "name": "Нигерия",
+          "english": "Nigeria",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/NG"
+        },
+        {
+          "code": "MK",
+          "name": "Северная Македония",
+          "english": "North Macedonia",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/MK"
+        },
+        {
+          "code": "NO",
+          "name": "Норвегия",
+          "english": "Norway",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/NO"
+        },
+        {
+          "code": "OM",
+          "name": "Оман",
+          "english": "Oman",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/OM"
+        },
+        {
+          "code": "PK",
+          "name": "Пакистан",
+          "english": "Pakistan",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/PK"
+        },
+        {
+          "code": "PA",
+          "name": "Панама",
+          "english": "Panama",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/PA"
+        },
+        {
+          "code": "PG",
+          "name": "Папуа — Новая Гвинея",
+          "english": "Papua New Guinea",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/PG"
+        },
+        {
+          "code": "PY",
+          "name": "Парагвай",
+          "english": "Paraguay",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/PY"
+        },
+        {
+          "code": "PE",
+          "name": "Перу",
+          "english": "Peru",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/PE"
+        },
+        {
+          "code": "PH",
+          "name": "Филиппины",
+          "english": "Philippines",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/PH"
+        },
+        {
+          "code": "PL",
+          "name": "Польша",
+          "english": "Poland",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/PL"
+        },
+        {
+          "code": "PT",
+          "name": "Португалия",
+          "english": "Portugal",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/PT"
+        },
+        {
+          "code": "PR",
+          "name": "Пуэрто-Рико",
+          "english": "Puerto Rico",
+          "plans": 3,
+          "url": "https://app.mojomobile.ru/countries/PR"
+        },
+        {
+          "code": "QA",
+          "name": "Катар",
+          "english": "Qatar",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/QA"
+        },
+        {
+          "code": "RE",
+          "name": "Реюньон",
+          "english": "Réunion",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/RE"
+        },
+        {
+          "code": "RO",
+          "name": "Румыния",
+          "english": "Romania",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/RO"
+        },
+        {
+          "code": "RW",
+          "name": "Руанда",
+          "english": "Rwanda",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/RW"
+        },
+        {
+          "code": "WS",
+          "name": "Самоа",
+          "english": "Samoa",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/WS"
+        },
+        {
+          "code": "SM",
+          "name": "Сан-Марино",
+          "english": "San Marino",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/SM"
+        },
+        {
+          "code": "SA",
+          "name": "Саудовская Аравия",
+          "english": "Saudi Arabia",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/SA"
+        },
+        {
+          "code": "SN",
+          "name": "Сенегал",
+          "english": "Senegal",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/SN"
+        },
+        {
+          "code": "RS",
+          "name": "Сербия",
+          "english": "Serbia",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/RS"
+        },
+        {
+          "code": "SC",
+          "name": "Сейшельские о-ва",
+          "english": "Seychelles",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/SC"
+        },
+        {
+          "code": "SL",
+          "name": "Сьерра-Леоне",
+          "english": "Sierra Leone",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/SL"
+        },
+        {
+          "code": "SG",
+          "name": "Сингапур",
+          "english": "Singapore",
+          "plans": 25,
+          "url": "https://app.mojomobile.ru/countries/SG"
+        },
+        {
+          "code": "SK",
+          "name": "Словакия",
+          "english": "Slovakia",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/SK"
+        },
+        {
+          "code": "SI",
+          "name": "Словения",
+          "english": "Slovenia",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/SI"
+        },
+        {
+          "code": "ZA",
+          "name": "Южно-Африканская Республика",
+          "english": "South Africa",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/ZA"
+        },
+        {
+          "code": "KR",
+          "name": "Республика Корея",
+          "english": "South Korea",
+          "plans": 27,
+          "url": "https://app.mojomobile.ru/countries/KR"
+        },
+        {
+          "code": "SS",
+          "name": "Южный Судан",
+          "english": "South Sudan",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/SS"
+        },
+        {
+          "code": "ES",
+          "name": "Испания",
+          "english": "Spain",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/ES"
+        },
+        {
+          "code": "LK",
+          "name": "Шри-Ланка",
+          "english": "Sri Lanka",
+          "plans": 13,
+          "url": "https://app.mojomobile.ru/countries/LK"
+        },
+        {
+          "code": "BL",
+          "name": "Сен-Бартелеми",
+          "english": "St. Barthélemy",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/BL"
+        },
+        {
+          "code": "KN",
+          "name": "Сент-Китс и Невис",
+          "english": "St. Kitts & Nevis",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/KN"
+        },
+        {
+          "code": "LC",
+          "name": "Сент-Люсия",
+          "english": "St. Lucia",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/LC"
+        },
+        {
+          "code": "MF",
+          "name": "Сен-Мартен",
+          "english": "St. Martin",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/MF"
+        },
+        {
+          "code": "VC",
+          "name": "Сент-Винсент и Гренадины",
+          "english": "St. Vincent & Grenadines",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/VC"
+        },
+        {
+          "code": "SD",
+          "name": "Судан",
+          "english": "Sudan",
+          "plans": 3,
+          "url": "https://app.mojomobile.ru/countries/SD"
+        },
+        {
+          "code": "SR",
+          "name": "Суринам",
+          "english": "Suriname",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/SR"
+        },
+        {
+          "code": "SE",
+          "name": "Швеция",
+          "english": "Sweden",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/SE"
+        },
+        {
+          "code": "CH",
+          "name": "Швейцария",
+          "english": "Switzerland",
+          "plans": 15,
+          "url": "https://app.mojomobile.ru/countries/CH"
+        },
+        {
+          "code": "TJ",
+          "name": "Таджикистан",
+          "english": "Tajikistan",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/TJ"
+        },
+        {
+          "code": "TZ",
+          "name": "Танзания",
+          "english": "Tanzania",
+          "plans": 8,
+          "url": "https://app.mojomobile.ru/countries/TZ"
+        },
+        {
+          "code": "TH",
+          "name": "Таиланд",
+          "english": "Thailand",
+          "plans": 28,
+          "url": "https://app.mojomobile.ru/countries/TH"
+        },
+        {
+          "code": "TG",
+          "name": "Того",
+          "english": "Togo",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/TG"
+        },
+        {
+          "code": "TO",
+          "name": "Тонга",
+          "english": "Tonga",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/TO"
+        },
+        {
+          "code": "TT",
+          "name": "Тринидад и Тобаго",
+          "english": "Trinidad & Tobago",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/TT"
+        },
+        {
+          "code": "TN",
+          "name": "Тунис",
+          "english": "Tunisia",
+          "plans": 11,
+          "url": "https://app.mojomobile.ru/countries/TN"
+        },
+        {
+          "code": "TR",
+          "name": "Турция",
+          "english": "Türkiye",
+          "plans": 19,
+          "url": "https://app.mojomobile.ru/countries/TR"
+        },
+        {
+          "code": "TC",
+          "name": "Тёркс и Кайкос",
+          "english": "Turks & Caicos Islands",
+          "plans": 7,
+          "url": "https://app.mojomobile.ru/countries/TC"
+        },
+        {
+          "code": "UG",
+          "name": "Уганда",
+          "english": "Uganda",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/UG"
+        },
+        {
+          "code": "AE",
+          "name": "ОАЭ",
+          "english": "United Arab Emirates",
+          "plans": 15,
+          "url": "https://app.mojomobile.ru/countries/AE"
+        },
+        {
+          "code": "GB",
+          "name": "Великобритания",
+          "english": "United Kingdom",
+          "plans": 14,
+          "url": "https://app.mojomobile.ru/countries/GB"
+        },
+        {
+          "code": "US",
+          "name": "Соединенные Штаты",
+          "english": "United States",
+          "plans": 31,
+          "url": "https://app.mojomobile.ru/countries/US"
+        },
+        {
+          "code": "UY",
+          "name": "Уругвай",
+          "english": "Uruguay",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/UY"
+        },
+        {
+          "code": "UZ",
+          "name": "Узбекистан",
+          "english": "Uzbekistan",
+          "plans": 9,
+          "url": "https://app.mojomobile.ru/countries/UZ"
+        },
+        {
+          "code": "VU",
+          "name": "Вануату",
+          "english": "Vanuatu",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/VU"
+        },
+        {
+          "code": "VA",
+          "name": "Ватикан",
+          "english": "Vatican City",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/VA"
+        },
+        {
+          "code": "VE",
+          "name": "Венесуэла",
+          "english": "Venezuela",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/VE"
+        },
+        {
+          "code": "VN",
+          "name": "Вьетнам",
+          "english": "Vietnam",
+          "plans": 25,
+          "url": "https://app.mojomobile.ru/countries/VN"
+        },
+        {
+          "code": "YE",
+          "name": "Йемен",
+          "english": "Yemen",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/YE"
+        },
+        {
+          "code": "ZM",
+          "name": "Замбия",
+          "english": "Zambia",
+          "plans": 12,
+          "url": "https://app.mojomobile.ru/countries/ZM"
+        },
+        {
+          "code": "ZW",
+          "name": "Зимбабве",
+          "english": "Zimbabwe",
+          "plans": 10,
+          "url": "https://app.mojomobile.ru/countries/ZW"
+        }
+      ]
+    </script>
+    <script src="app.js?v=7" defer></script>
+  </body>
+</html>
