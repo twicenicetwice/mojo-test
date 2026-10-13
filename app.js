@@ -8,14 +8,41 @@ for (const [key, value] of incoming)
     value.length <= 300
   )
     attribution.set(key, value);
-function shopLink(url) {
-  const u = new URL(url);
-  if (u.origin === shopOrigin)
-    for (const [key, value] of attribution) u.searchParams.set(key, value);
-  return u.href;
+const marketingCodes = incoming.getAll("m");
+const marketingCode =
+  location.pathname === "/" &&
+  marketingCodes.length === 1 &&
+  /^[A-Za-z0-9_-]{8,32}$/.test(marketingCodes[0])
+    ? marketingCodes[0]
+    : null;
+function purchaseLink(url, channel = "WEB", country) {
+  const target = new URL(url);
+  if (marketingCode) {
+    if (channel === "MINI_APP") {
+      target.search = "";
+      target.hash = "";
+      target.searchParams.set(
+        "startapp",
+        `${country ? `country_${country}_` : ""}m_${marketingCode}`,
+      );
+    } else {
+      target.pathname = "/m/" + marketingCode;
+      target.search = "";
+      target.hash = "";
+      target.searchParams.set("channel", "WEB");
+      if (country) target.searchParams.set("country", country);
+    }
+  } else if (target.origin === shopOrigin) {
+    for (const [key, value] of attribution) target.searchParams.set(key, value);
+  }
+  return target.href;
 }
-for (const link of document.querySelectorAll("a[data-shop]"))
-  link.href = shopLink(link.href);
+for (const link of document.querySelectorAll("a[data-mojo-channel]"))
+  link.href = purchaseLink(
+    link.href,
+    link.dataset.mojoChannel,
+    link.dataset.mojoCountry,
+  );
 const menu = document.querySelector(".menu");
 const menuDialog = document.querySelector("#mobile-menu"),
   countryDialog = document.querySelector("#countries-dialog");
@@ -118,7 +145,9 @@ function matchCountries(query) {
 function countryCard(c) {
   const link = document.createElement("a");
   link.className = "country";
-  link.href = shopLink(c.url);
+  link.href = purchaseLink(c.url, "WEB", c.code);
+  link.dataset.mojoChannel = "WEB";
+  link.dataset.mojoCountry = c.code;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
   link.dataset.shop = "";
@@ -431,7 +460,7 @@ const mobileBar = document.querySelector(".mobile-bar");
     }
     const selected = rows.find((c) => c.code === country.value),
       url = selected ? selected.url : "https://app.mojomobile.ru/";
-    const link = new URL(url);
+    const link = new URL(purchaseLink(url, "WEB", selected?.code));
     link.searchParams.set("utm_source", "calendar");
     link.searchParams.set("utm_medium", "reminder");
     link.searchParams.set("utm_campaign", "before_flight");
@@ -442,7 +471,13 @@ const mobileBar = document.querySelector(".mobile-bar");
         : "Выбрать eSIM Mojo Mobile для поездки.",
       "Вылет: " + longDate.format(result.departure) + ".",
       "Купить: " + link.href,
-      "Telegram: https://t.me/mojo_mobile_bot?startapp",
+      "Telegram: " +
+        purchaseLink(
+          "https://t.me/mojo_mobile_bot/store" +
+            (selected ? "?startapp=country_" + selected.code : ""),
+          "MINI_APP",
+          selected?.code,
+        ),
       "Проверьте совместимость телефона и срок активации выбранного тарифа.",
     ].join("\n");
     const key = [flight.value, lead.value, time.value, country.value].join("|");
